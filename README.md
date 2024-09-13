@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Flexion Coding Task
 
-## Getting Started
+## Table of Contents
+1. [Technologies Used](#technologies-used)
+2. [5 Improvements](#5-improvements)
+3. [Installation](#installation)
+4. [Running Tests](#running-tests)
+    - [Unit Test](#unit-test)
+    - [End-to-End (E2E) Test](#end-to-end-e2e-test)
 
-First, run the development server:
 
-```bash
+## Technologies Used
+- Next.js
+- React Icons
+- Jest
+- Cypress
+- Storybook
+- AntD / TailwindCSS
+
+## 5 Improvements
+1. Currently each unit converter has its own file in its respective quantity folder. I would convert each file into folders so unit tests can be added for that in the given folder.
+2. Due to typescript types causing issues for the structure I have, I was not able to divide frontend components into smaller chunks. I would divide the frontend into further components to increase code-reusibility and extendibility.
+3. I had integrated Storybook for the project since I could not divide the frontend into smaller components. I would also write user stories from atomic to page level components to make sure each component handles all the states appropriatly.
+4. I would write comprehensive unit tests covering each unit converter and each edge case so we can reduce the possibility of bugs in the conversion to almost zero.
+5. I introduce some common components like Select, Input and Table. I would add an atomic library that has a lot more customizations for atomic components. 
+6. I would introduce much stricter lint/prettier configuration with pre-commit hooks to ensure code quality and formatting.
+
+
+# Installation
+To install Flexion Coding Task, you can use npm:
+### Install Dependencies
+```
+npm i
+```
+### Run Locally
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+### Build
+```
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Installation
+### Unit Tests
+```
+npm run test
+```
+### E2E Tests
+```
+npm run cypress
+```
